@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
+
+<c74object name="th.mcChannelcount~">
+
+	<digest>
+		The channelcount of an mc as signal
+	</digest>
+
+	<description>
+		Returns the channelcount of an mc as signal
+	</description>
+
+	<!--METADATA-->
+	<metadatalist>
+		<metadata name="author">Timo Hoogland</metadata>
+		<metadata name="tag">thModules</metadata>
+		<metadata name="tag">mc</metadata>
+		<metadata name="tag">gen</metadata>
+		<metadata name="tag">msp</metadata>
+	</metadatalist>
+
+	<!--INLETS-->
+	<inletlist>
+		<inlet id="0" type="signal" optional="0">
+			<digest>Multi-channel signal input</digest>
+		</inlet>
+		<!-- <inlet id="1" type="int">
+			<digest></digest>
+		</inlet> -->
+	</inletlist>
+
+	<!--OUTLETS-->
+	<outletlist>
+		<outlet id="0" type="signal">
+			<digest>Th channelcount as a signal</digest>
+		</outlet>
+	</outletlist>
+
+	<!--ARGUMENTS-->
+	<objarglist>
+		<!-- <objarg name="matrix_name" optional="0" type="symbol">
+			<digest>
+				name of the jit.matrix to access and write to.
+			</digest>
+			<description>
+				name of the jit.matrix to access and write to.
+			</description>
+		</objarg> -->
+	</objarglist>
+
+	<!--MESSAGES-->
+	<methodlist>
+		<method name="signal">
+			<arglist>
+				<arg name="signal" optional="0" type="signal" />
+			</arglist>
+			<digest>
+				Multi-channel signal input
+			</digest>
+			<description>
+				Multi-channel signal input to use for channelcount
+			</description>
+		</method>
+		<!-- <method name="int">
+			<arglist>
+				<arg name="int" optional="0" type="int" />
+			</arglist>
+			<digest>
+				Function depends on inlet
+			</digest>
+			<description>
+				Inlet 0 (hot): <br />
+				@listmode = 1: The amount of 3bonacci numbers to output in a list of strings or integers. <br />
+				@listmode = 0: The nth-3bonacci number to output.
+				<br />
+				<br />
+				Inlet 1 (hot): The value that sets the modulo operation on the numbers. Must be greater than 1, otherwise not applied(default = 0).
+			</description>
+		</method> -->
+	</methodlist>
+
+	<!--ATTRIBUTES-->
+	<attributelist>
+		<!-- <attribute name='listmode' get='0' set='1' type='int' size='2' >
+			<digest>switch between sequence or nth-3bonacci</digest>
+			<description>
+				When listmode = 1: Output the sequence length specified. <br />
+				When listmode = 0: Output the nth-3bonacci number.
+			</description>
+		</attribute> -->
+	</attributelist>
+
+	<!--SEEALSO-->
+	<seealsolist>
+		<seealso name="th.mcFromMatrix~"/>
+		<seealso name="th.mcToMatrix~"/>
+		<seealso name="mc.channelcount~"/>
+		<seealso name="gen~"/>
+	</seealsolist>
+</c74object>

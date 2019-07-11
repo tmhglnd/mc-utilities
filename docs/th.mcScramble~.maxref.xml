@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
+
+<c74object name="th.mcScramble~">
+
+	<digest>
+		Scramble the order of channels
+	</digest>
+
+	<description>
+		Scramble the order of channels
+		<br /><br />
+		Scramble the channel order of a multi-channel signal. A bang scrambles the list. Similar to zl.scramble. Initially outputs the mc unscrambled.	
+	</description>
+
+	<!--METADATA-->
+	<metadatalist>
+		<metadata name="author">Timo Hoogland</metadata>
+		<metadata name="tag">thModules</metadata>
+		<metadata name="tag">mc</metadata>
+		<metadata name="tag">list</metadata>
+		<metadata name="tag">msp</metadata>
+	</metadatalist>
+
+	<!--INLETS-->
+	<inletlist>
+		<inlet id="0" type="multi-channel signal">
+			<digest>Multi-channel signal input</digest>
+		</inlet>
+		<inlet id="0" type="bang">
+			<digest>Scramble the channels</digest>
+		</inlet>
+		<inlet id="0" type="message">
+			<digest>Seed the Pseudorandom Number Generator</digest>
+		</inlet>
+	</inletlist>
+
+	<!--OUTLETS-->
+	<outletlist>
+		<outlet id="0" type="multi-channel signal">
+			<digest>Multi-channel signal output</digest>
+		</outlet>
+		<outlet id="1" type="list">
+			<digest>Scrambled indices list</digest>
+		</outlet>
+	</outletlist>
+
+	<!--ARGUMENTS-->
+	<objarglist>
+		<objarg name="channels" optional="0" type="symbol">
+			<digest>
+				Specify the amount of channels for the in and output.
+			</digest>
+			<description>
+				Specify the amount of channels for the in and output.
+			</description>
+		</objarg>
+		<!-- <objarg name="list" optional="1" type="symbol">
+			<digest>
+				Specify a list of indices to map the channels to.
+			</digest>
+			<description>
+				Specify a list of indices to map the channels to.
+			</description>
+		</objarg> -->
+	</objarglist>
+
+	<!--MESSAGES-->
+	<methodlist>
+		<method name="signal">
+			<arglist>
+				<arg name="signal" optional="0" type="signal" />
+			</arglist>
+			<digest>
+				Multi-channel signal input.
+			</digest>
+			<description>
+				Multi-channel signal input to scramble.
+			</description>
+		</method>
+		<method name="bang">
+			<arglist>
+				<arg name="bang" optional="1" type="bang" />
+			</arglist>
+			<digest>
+				Scramble the channels.
+			</digest>
+			<description>
+				Scramble the channels.
+			</description>
+		</method>
+		<method name="seed">
+			<arglist>
+				<arg name="seed" optional="1" type="message" />
+			</arglist>
+			<digest>
+				Seed the random generator.
+			</digest>
+			<description>
+				Seed the random generator.
+			</description>
+		</method>
+	</methodlist>
+
+	<!--ATTRIBUTES-->
+	<attributelist>
+		<attribute name='ramp' get='0' set='1' type='float' size='1' >
+			<digest>crossfade time in ms</digest>
+			<description>
+				Crossfade time in ms for fading between new index maps (default = 0).
+			</description>
+		</attribute>
+	</attributelist>
+
+	<!--SEEALSO-->
+	<seealsolist>
+		<seealso name="th.mcFromMatrix~"/>
+		<seealso name="th.mcToMatrix~"/>
+		<seealso name="th.mcScramble~"/>
+		<seealso name="th.mcIndexmap~"/>
+		<seealso name="th.mcRev~"/>
+		<seealso name="th.mcRot~"/>
+		<seealso name="th.mcNth~"/>
+		<seealso name="th.mcMth~"/>
+		<seealso name="th.mcChannelcount~"/>
+		<seealso name="jit.cellblock"/>
+		<seealso name="dspstate~"/>
+	</seealsolist>
+</c74object>

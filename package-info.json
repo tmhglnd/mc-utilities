@@ -1,0 +1,44 @@
+{
+	"name" : "th.mcutilities~",
+	"displayname" : "",
+	"version" : "1.0.0",
+	"author" : "Timo Hoogland",
+	"authors" : [  ],
+	"description" : "This package contains small abstractions to use with the MC domain in Max8. Read and write MC to a jit.matrix with th.mcToMatrix~ and th.mcFromMatrix~. Perform functions on channels as-if list like with th.mcScramble~, th.mcIndexmap~, th.mcNth~, th.mcMth~, th.mcRot~, th.mcRev~",
+	"tags" : [ "mc", "msp", "utility", "list", "tool"],
+	"website" : "http://www.gumroad.com/tmhglnd",
+	"extends" : "",
+	"extensible" : 0,
+	"max_version_min" : "8.0",
+	"max_version_max" : "none",
+	"os" : 	{
+		"macintosh" : 		{
+			"min_version" : "none",
+			"platform" : [ "x64" ]
+		}
+,
+		"windows" : 		{
+			"min_version" : "none",
+			"platform" : [ "x64" ]
+		}
+	}
+,
+	"homepatcher" : "mc_utilities_overview.maxpat",
+	"package_extra" : 	{
+		"reverse_domain" : "com.cycling74",
+		"copyright" : "Copyright (c) 2019 Timo Hoogland"
+	}
+,
+	"filelist" : 	{
+		"examples" : [],
+		"externals" : [],
+		"patchers" : [ "th.mcToMatrix~.maxpat", "th.mcFromMatrix~.maxpat", "th.mcScramble~.maxpat", "th.mcIndexmap~.maxpat", "th.mcRot~.maxpat", "th.mcRev~.maxpat", "th.mcMth~.maxpat", "th.mcNth~.maxpat", "th.mcChannelcount~.maxpat"],
+		"help" : [ "th.mcToMatrix~.maxhelp", "th.mcFromMatrix~.maxhelp", "th.mcScramble~.maxhelp", "th.mcIndexmap~.maxhelp", "th.mcRot~.maxhelp", "th.mcRev~.maxhelp", "th.mcMth~.maxhelp", "th.mcNth~.maxhelp", "th.mcChannelcount~.maxhelp" ],
+		"docs" : [ "th.mcToMatrix~.maxref.xml", "th.mcFromMatrix~.maxref.xml", "th.mcScramble~.maxref.xml", "th.mcIndexmap~.maxref.xml", "th.mcRot~.maxref.xml", "th.mcRev~.maxref.xml", "th.mcMth~.maxref.xml", "th.mcNth~.maxref.xml", "th.mcChannelcount~.maxref.xml" ],
+		"code" : [],
+		"extras" : []
+	}
+,
+	"c74install" : 1,
+	"installdate" : 3638166346
+}

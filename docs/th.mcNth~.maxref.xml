@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
+
+<c74object name="th.mcNth~">
+
+	<digest>
+		Output the nth channel from an mc
+	</digest>
+
+	<description>
+		Output the nth channel from an mc
+		<br /><br />
+		Output the nth channel from the multi-channel signal input, similar to the zl.nth object. Count from one.
+	</description>
+
+	<!--METADATA-->
+	<metadatalist>
+		<metadata name="author">Timo Hoogland</metadata>
+		<metadata name="tag">thModules</metadata>
+		<metadata name="tag">mc</metadata>
+		<metadata name="tag">list</metadata>
+		<metadata name="tag">msp</metadata>
+	</metadatalist>
+
+	<!--INLETS-->
+	<inletlist>
+		<inlet id="0" type="multi-channel signal">
+			<digest>Multi-channel signal input</digest>
+		</inlet>
+		<inlet id="1" type="(int/float/signal)">
+			<digest>nth channel from mc to extract.</digest>
+		</inlet>
+	</inletlist>
+
+	<!--OUTLETS-->
+	<outletlist>
+		<outlet id="0" type="signal">
+			<digest>Signal output</digest>
+		</outlet>
+	</outletlist>
+
+	<!--ARGUMENTS-->
+	<objarglist>
+		<objarg name="nth" optional="1" type="int">
+			<digest>
+				Channel from mc to extract.
+			</digest>
+			<description>
+				Specify the channel number from mc to extract. Count from one. Higher or lower values wrap back between 1 and channelcount.
+			</description>
+		</objarg>
+		<!-- <objarg name="list" optional="1" type="symbol">
+			<digest>
+				Specify a list of indices to map the channels to.
+			</digest>
+			<description>
+				Specify a list of indices to map the channels to.
+			</description>
+		</objarg> -->
+	</objarglist>
+
+	<!--MESSAGES-->
+	<methodlist>
+		<method name="signal">
+			<arglist>
+				<arg name="signal" optional="0" type="signal" />
+			</arglist>
+			<digest>
+				Function depends on inlet
+			</digest>
+			<description>
+				Inlet 0 (hot): <br />
+				Multi-channel signal input to write to matrix.
+				<br />
+				<br />
+				Inlet 1 (hot): <br />
+				Signal to specify the channel number from mc to extract. Count from one.
+			</description>
+		</method>
+		<method name="int">
+			<arglist>
+				<arg name="int" optional="1" type="int" />
+			</arglist>
+			<digest>
+				Function depends on inlet
+			</digest>
+			<description>
+				Inlet 1 (hot): <br />
+				Specify the channel number from mc to extract. Count from one. Higher or lower values wrap back between 1 and channelcount.
+			</description>
+		</method>
+	</methodlist>
+
+	<!--ATTRIBUTES-->
+	<attributelist>
+		<!-- <attribute name='listmode' get='0' set='1' type='int' size='2' >
+			<digest>switch between sequence or nth-3bonacci</digest>
+			<description>
+				When listmode = 1: Output the sequence length specified. <br />
+				When listmode = 0: Output the nth-3bonacci number.
+			</description>
+		</attribute> -->
+	</attributelist>
+
+	<!--SEEALSO-->
+	<seealsolist>
+		<seealso name="th.mcFromMatrix~"/>
+		<seealso name="th.mcToMatrix~"/>
+		<seealso name="th.mcScramble~"/>
+		<seealso name="th.mcIndexmap~"/>
+		<seealso name="th.mcRev~"/>
+		<seealso name="th.mcRot~"/>
+		<seealso name="th.mcNth~"/>
+		<seealso name="th.mcMth~"/>
+		<seealso name="th.mcChannelcount~"/>
+		<seealso name="jit.cellblock"/>
+		<seealso name="dspstate~"/>
+	</seealsolist>
+</c74object>

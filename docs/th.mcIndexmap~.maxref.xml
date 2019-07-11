@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
+
+<c74object name="th.mcIndexmap~">
+
+	<digest>
+		Reorder channels of mc
+	</digest>
+
+	<description>
+		Reorder channels of mc
+		<br /><br />
+		Change the order of channels based on a list of values, similar to zl.indexmap. Input a multichannel on the left inlet, input a list on the right inlet re-ordering the channel order. 	
+	</description>
+
+	<!--METADATA-->
+	<metadatalist>
+		<metadata name="author">Timo Hoogland</metadata>
+		<metadata name="tag">thModules</metadata>
+		<metadata name="tag">mc</metadata>
+		<metadata name="tag">list</metadata>
+		<metadata name="tag">msp</metadata>
+	</metadatalist>
+
+	<!--INLETS-->
+	<inletlist>
+		<inlet id="0" type="multi-channel signal">
+			<digest>Multi-channel signal input</digest>
+		</inlet>
+		<!-- <inlet id="1" type="int">
+			<digest></digest>
+		</inlet> -->
+	</inletlist>
+
+	<!--OUTLETS-->
+	<outletlist>
+		<outlet id="0" type="multi-channel signal">
+			<digest>Multi-channel signal output</digest>
+		</outlet>
+	</outletlist>
+
+	<!--ARGUMENTS-->
+	<objarglist>
+		<objarg name="channels" optional="0" type="symbol">
+			<digest>
+				Specify the amount of channels for the output.
+			</digest>
+			<description>
+				Specify the amount of channels for the output.
+			</description>
+		</objarg>
+		<objarg name="list" optional="1" type="symbol">
+			<digest>
+				Specify a list of indices to map the channels to.
+			</digest>
+			<description>
+				Specify a list of indices to map the channels to.
+			</description>
+		</objarg>
+	</objarglist>
+
+	<!--MESSAGES-->
+	<methodlist>
+		<method name="signal">
+			<arglist>
+				<arg name="signal" optional="0" type="signal" />
+			</arglist>
+			<digest>
+				Multi-channel signal input
+			</digest>
+			<description>
+				Multi-channel signal input to write to matrix
+			</description>
+		</method>
+		<method name="list">
+			<arglist>
+				<arg name="list" optional="1" type="int" />
+			</arglist>
+			<digest>
+				Function depends on inlet
+			</digest>
+			<description>
+				Inlet 1 (hot): <br />
+				Specify a list of indices to map the channels to.
+			</description>
+		</method>
+	</methodlist>
+
+	<!--ATTRIBUTES-->
+	<attributelist>
+		<attribute name='ramp' get='0' set='1' type='float' size='1' >
+			<digest>crossfade time in ms</digest>
+			<description>
+				Crossfade time in ms for fading between new index maps (default = 0).
+			</description>
+		</attribute>
+	</attributelist>
+
+	<!--SEEALSO-->
+	<seealsolist>
+		<seealso name="th.mcFromMatrix~"/>
+		<seealso name="th.mcToMatrix~"/>
+		<seealso name="th.mcScramble~"/>
+		<seealso name="th.mcIndexmap~"/>
+		<seealso name="th.mcRev~"/>
+		<seealso name="th.mcRot~"/>
+		<seealso name="th.mcNth~"/>
+		<seealso name="th.mcMth~"/>
+		<seealso name="th.mcChannelcount~"/>
+		<seealso name="jit.cellblock"/>
+		<seealso name="dspstate~"/>
+	</seealsolist>
+</c74object>
