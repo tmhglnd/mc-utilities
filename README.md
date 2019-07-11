@@ -2,6 +2,12 @@
 
 **Please consider to download and donate via http://gumroad.com/tmhglnd**
 
+**or become a patron on http://patreon.com/timohoogland**
+
+---
+
+## About
+
 This package contains small abstractions to use with the MC domain in Max8.
 
 ## Contains
