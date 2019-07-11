@@ -31,6 +31,6 @@ This package contains small abstractions to use with the MC domain in Max8.
 ```
 1. open terminal
 2. navigate to Max Packages (on MacOS cd ~/Documents/Max\ 8/Packages)
-3. $ git clone https://github.com/tmhglnd/th.euclid.git
+3. $ git clone https://github.com/tmhglnd/mc-utilities.git
 4. restart Max8, open Package manager, Launch th.mcutilities
 ```
