@@ -23,8 +23,8 @@ This package contains small abstractions to use with the MC domain in Max8.
 ## Install
 
 ```
-1. download zip and unzip
-2. place th.mcutilities in Max Packages (on MacOS ~/Documents/Max 8/Packages)
+1. download zip
+2. unzip and place in Max Packages (on MacOS ~/Documents/Max 8/Packages)
 3. restart Max8, open Package manager, Launch th.mcutilities
 ```
 
