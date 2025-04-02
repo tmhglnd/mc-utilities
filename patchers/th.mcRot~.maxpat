@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 0,
-			"revision" : 5,
+			"minor" : 5,
+			"revision" : 7,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 159.0, 89.0, 603.0, 740.0 ],
+		"rect" : [ 159.0, 96.0, 603.0, 740.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -37,6 +37,7 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
+		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
 					"data" : 					{
@@ -44,8 +45,8 @@
 							"fileversion" : 1,
 							"appversion" : 							{
 								"major" : 8,
-								"minor" : 0,
-								"revision" : 5,
+								"minor" : 5,
+								"revision" : 7,
 								"architecture" : "x64",
 								"modernui" : 1
 							}
@@ -78,14 +79,15 @@
 							"tags" : "",
 							"style" : "",
 							"subpatcher_template" : "",
+							"assistshowspatchername" : 0,
 							"boxes" : [ 								{
 									"box" : 									{
 										"maxclass" : "newobj",
 										"text" : "+ 1",
-										"outlettype" : [ "" ],
-										"patching_rect" : [ 90.0, 75.0, 26.0, 22.0 ],
 										"numinlets" : 1,
+										"patching_rect" : [ 90.0, 75.0, 26.0, 22.0 ],
 										"numoutlets" : 1,
+										"outlettype" : [ "" ],
 										"id" : "obj-7"
 									}
 
@@ -94,10 +96,10 @@
 									"box" : 									{
 										"maxclass" : "newobj",
 										"text" : "+",
-										"outlettype" : [ "" ],
-										"patching_rect" : [ 45.0, 119.0, 29.5, 22.0 ],
 										"numinlets" : 2,
+										"patching_rect" : [ 45.0, 119.0, 29.5, 22.0 ],
 										"numoutlets" : 1,
+										"outlettype" : [ "" ],
 										"id" : "obj-6"
 									}
 
@@ -106,10 +108,10 @@
 									"box" : 									{
 										"maxclass" : "newobj",
 										"text" : "in 2",
-										"outlettype" : [ "" ],
-										"patching_rect" : [ 90.0, 45.0, 28.0, 22.0 ],
 										"numinlets" : 0,
+										"patching_rect" : [ 90.0, 45.0, 28.0, 22.0 ],
 										"numoutlets" : 1,
+										"outlettype" : [ "" ],
 										"id" : "obj-5"
 									}
 
@@ -118,10 +120,10 @@
 									"box" : 									{
 										"maxclass" : "newobj",
 										"text" : "in 1",
-										"outlettype" : [ "" ],
-										"patching_rect" : [ 45.0, 45.0, 28.0, 22.0 ],
 										"numinlets" : 0,
+										"patching_rect" : [ 45.0, 45.0, 28.0, 22.0 ],
 										"numoutlets" : 1,
+										"outlettype" : [ "" ],
 										"id" : "obj-1"
 									}
 
@@ -130,10 +132,10 @@
 									"box" : 									{
 										"maxclass" : "newobj",
 										"text" : "in 3",
-										"outlettype" : [ "" ],
-										"patching_rect" : [ 150.0, 75.0, 28.0, 22.0 ],
 										"numinlets" : 0,
+										"patching_rect" : [ 150.0, 75.0, 28.0, 22.0 ],
 										"numoutlets" : 1,
+										"outlettype" : [ "" ],
 										"id" : "obj-2"
 									}
 
@@ -142,10 +144,10 @@
 									"box" : 									{
 										"maxclass" : "newobj",
 										"text" : "wrap 0",
-										"outlettype" : [ "" ],
-										"patching_rect" : [ 45.0, 165.0, 45.0, 22.0 ],
 										"numinlets" : 2,
+										"patching_rect" : [ 45.0, 165.0, 45.0, 22.0 ],
 										"numoutlets" : 1,
+										"outlettype" : [ "" ],
 										"id" : "obj-3"
 									}
 
@@ -154,8 +156,8 @@
 									"box" : 									{
 										"maxclass" : "newobj",
 										"text" : "out 1",
-										"patching_rect" : [ 45.0, 210.0, 35.0, 22.0 ],
 										"numinlets" : 1,
+										"patching_rect" : [ 45.0, 210.0, 35.0, 22.0 ],
 										"numoutlets" : 0,
 										"id" : "obj-4"
 									}
@@ -164,29 +166,8 @@
  ],
 							"lines" : [ 								{
 									"patchline" : 									{
-										"source" : [ "obj-7", 0 ],
-										"destination" : [ "obj-6", 1 ]
-									}
-
-								}
-, 								{
-									"patchline" : 									{
-										"source" : [ "obj-5", 0 ],
-										"destination" : [ "obj-7", 0 ]
-									}
-
-								}
-, 								{
-									"patchline" : 									{
-										"source" : [ "obj-6", 0 ],
-										"destination" : [ "obj-3", 0 ]
-									}
-
-								}
-, 								{
-									"patchline" : 									{
-										"source" : [ "obj-1", 0 ],
-										"destination" : [ "obj-6", 0 ]
+										"source" : [ "obj-3", 0 ],
+										"destination" : [ "obj-4", 0 ]
 									}
 
 								}
@@ -199,8 +180,29 @@
 								}
 , 								{
 									"patchline" : 									{
-										"source" : [ "obj-3", 0 ],
-										"destination" : [ "obj-4", 0 ]
+										"source" : [ "obj-1", 0 ],
+										"destination" : [ "obj-6", 0 ]
+									}
+
+								}
+, 								{
+									"patchline" : 									{
+										"source" : [ "obj-6", 0 ],
+										"destination" : [ "obj-3", 0 ]
+									}
+
+								}
+, 								{
+									"patchline" : 									{
+										"source" : [ "obj-5", 0 ],
+										"destination" : [ "obj-7", 0 ]
+									}
+
+								}
+, 								{
+									"patchline" : 									{
+										"source" : [ "obj-7", 0 ],
+										"destination" : [ "obj-6", 1 ]
 									}
 
 								}
@@ -215,7 +217,8 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "multichannelsignal" ],
 					"patching_rect" : [ 60.0, 525.0, 103.0, 22.0 ],
-					"text" : "mc.gen~ @t wrap"
+					"text" : "mc.gen~ @t wrap",
+					"wrapper_uniquekey" : "u295010510"
 				}
 
 			}
@@ -238,8 +241,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 232.5, 299.0, 22.0, 22.0 ],
-					"text" : "t b"
+					"patching_rect" : [ 232.5, 285.0, 58.0, 22.0 ],
+					"text" : "loadbang"
 				}
 
 			}
@@ -250,8 +253,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 232.5, 329.0, 29.5, 22.0 ],
-					"text" : "i #1"
+					"patching_rect" : [ 232.5, 315.0, 29.5, 22.0 ],
+					"text" : "i #2"
 				}
 
 			}
@@ -266,8 +269,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 0,
-							"revision" : 5,
+							"minor" : 5,
+							"revision" : 7,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -300,6 +303,7 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
+						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-5",
@@ -512,8 +516,8 @@
 					"id" : "obj-37",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "int", "signal" ],
 					"patching_rect" : [ 60.0, 315.0, 106.0, 22.0 ],
 					"text" : "mc.channelcount~"
 				}
@@ -582,7 +586,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "(multi-channel signal) scrambled output",
+					"comment" : "(multi-channel signal) rotated output",
 					"id" : "obj-1",
 					"index" : 1,
 					"maxclass" : "outlet",
@@ -594,7 +598,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "(multi-channel signal) channels to scramble",
+					"comment" : "(multi-channel signal) channels to rotate",
 					"id" : "obj-5",
 					"index" : 1,
 					"maxclass" : "inlet",
@@ -707,16 +711,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-16", 0 ],
-					"order" : 0,
-					"source" : [ "obj-3", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-4", 0 ],
-					"order" : 1,
 					"source" : [ "obj-3", 0 ]
 				}
 
@@ -824,13 +819,13 @@
 				"name" : "AudioStatus_Menu",
 				"default" : 				{
 					"bgfillcolor" : 					{
-						"type" : "color",
+						"angle" : 270.0,
+						"autogradient" : 0,
 						"color" : [ 0.294118, 0.313726, 0.337255, 1 ],
 						"color1" : [ 0.454902, 0.462745, 0.482353, 0.0 ],
 						"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"angle" : 270.0,
 						"proportion" : 0.39,
-						"autogradient" : 0
+						"type" : "color"
 					}
 
 				}
@@ -842,12 +837,12 @@
 				"name" : "Audiomix",
 				"default" : 				{
 					"bgfillcolor" : 					{
-						"type" : "gradient",
+						"angle" : 270.0,
+						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
 						"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
 						"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-						"angle" : 270.0,
-						"proportion" : 0.39
+						"proportion" : 0.39,
+						"type" : "gradient"
 					}
 
 				}
