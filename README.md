@@ -26,17 +26,19 @@ This package contains small abstractions to use with the MC domain in Max8.
 
 - **th.mcChannelcount~** - *Returns the channelcount of an mc as signal*
 
+- **th.mcMultiTool~** - *Apply scramble, rotate and reverse to a multichannel within one object*
+
 ## Install
 
 ```
 1. download zip
-2. unzip and place in Max Packages (on MacOS ~/Documents/Max 8/Packages)
-3. restart Max8, open Package manager, Launch th.mcutilities
+2. unzip and place in Max Packages (on MacOS ~/Documents/Max 9/Packages)
+3. restart Max9, open Package manager, Launch MC Utilities Overview
 ```
 
 ```
 1. open terminal
-2. navigate to Max Packages (on MacOS cd ~/Documents/Max\ 8/Packages)
+2. navigate to Max Packages (on MacOS cd ~/Documents/Max\ 9/Packages)
 3. $ git clone https://github.com/tmhglnd/mc-utilities.git
-4. restart Max8, open Package manager, Launch th.mcutilities
+4. restart Max9, open Package manager, Launch MC Utilities Overview
 ```
