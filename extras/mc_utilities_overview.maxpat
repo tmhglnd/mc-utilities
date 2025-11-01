@@ -574,8 +574,8 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 150.0, 525.0, 296.0, 35.0 ],
-                    "text": ";\rmax launchbrowser http://www.gumroad.com/tmhglnd"
+                    "patching_rect": [ 150.0, 525.0, 332.0, 35.0 ],
+                    "text": ";\rmax launchbrowser https://www.patreon.com/c/timohoogland"
                 }
             },
             {
@@ -591,7 +591,7 @@
                     "outlettype": [ "", "", "int" ],
                     "parameter_enable": 0,
                     "patching_rect": [ 150.0, 465.0, 150.0, 23.0 ],
-                    "text": "more on gumroad",
+                    "text": "support me",
                     "textjustification": 0,
                     "textoncolor": [ 0.239216, 0.254902, 0.278431, 1.0 ],
                     "usebgoncolor": 1

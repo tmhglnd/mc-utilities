@@ -9,8 +9,87 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 375.0, 147.0, 661.0, 633.0 ],
+        "rect": [ 375.0, 147.0, 662.0, 667.0 ],
         "boxes": [
+            {
+                "box": {
+                    "data": {
+                        "patcher": {
+                            "fileversion": 1,
+                            "appversion": {
+                                "major": 9,
+                                "minor": 1,
+                                "revision": 0,
+                                "architecture": "x64",
+                                "modernui": 1
+                            },
+                            "classnamespace": "dsp.gen",
+                            "rect": [ 59.0, 115.0, 600.0, 450.0 ],
+                            "boxes": [
+                                {
+                                    "box": {
+                                        "maxclass": "comment",
+                                        "text": "just a throughput, to remove errors from mcs.matrix~ when there is not an input of another multichannel signal yet",
+                                        "linecount": 5,
+                                        "patching_rect": [ 91.0, 30.0, 150.0, 74.0 ],
+                                        "numoutlets": 0,
+                                        "id": "obj-3",
+                                        "numinlets": 1
+                                    }
+                                },
+                                {
+                                    "box": {
+                                        "maxclass": "newobj",
+                                        "text": "in 1",
+                                        "patching_rect": [ 30.0, 30.0, 28.0, 22.0 ],
+                                        "numoutlets": 1,
+                                        "id": "obj-1",
+                                        "outlettype": [ "" ],
+                                        "numinlets": 0
+                                    }
+                                },
+                                {
+                                    "box": {
+                                        "maxclass": "newobj",
+                                        "text": "out 1",
+                                        "patching_rect": [ 30.0, 76.0, 35.0, 22.0 ],
+                                        "numoutlets": 0,
+                                        "id": "obj-4",
+                                        "numinlets": 1
+                                    }
+                                }
+                            ],
+                            "lines": [
+                                {
+                                    "patchline": {
+                                        "source": [ "obj-1", 0 ],
+                                        "destination": [ "obj-4", 0 ]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "id": "obj-13",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "multichannelsignal" ],
+                    "patching_rect": [ 30.0, 246.0, 162.0, 22.0 ],
+                    "text": "mc.gen~ @t thru @chans #1",
+                    "wrapper_uniquekey": "u476010382"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-11",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 2,
+                    "outlettype": [ "bang", "" ],
+                    "patching_rect": [ 105.0, 315.0, 34.0, 22.0 ],
+                    "text": "sel 1"
+                }
+            },
             {
                 "box": {
                     "fontsize": 11.0,
@@ -19,7 +98,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 247.0, 379.0, 405.0, 191.0 ],
+                    "patching_rect": [ 247.0, 440.0, 405.0, 191.0 ],
                     "text": "th.mcRev~\nCopyright (C) 2018 Timo Hoogland\n\nThis program is free software: you can redistribute it and/or modify\nit under the terms of the GNU Lesser General Public License as published by\nthe Free Software Foundation, either version 3 of the License, or\n(at your option) any later version.\n\nThis program is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU Lesser General Public License for more details.\n\nYou should have received a copy of the GNU Lesser General Public License\nalong with this program.  If not, see <https://www.gnu.org/licenses/>.",
                     "textcolor": [ 0.0, 0.0, 0.0, 0.5 ]
                 }
@@ -95,7 +174,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "int" ],
-                    "patching_rect": [ 111.0, 380.0, 29.5, 22.0 ],
+                    "patching_rect": [ 156.0, 440.0, 29.5, 22.0 ],
                     "text": "+ 1"
                 }
             },
@@ -106,7 +185,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "int" ],
-                    "patching_rect": [ 111.0, 410.0, 33.0, 22.0 ],
+                    "patching_rect": [ 156.0, 470.0, 33.0, 22.0 ],
                     "text": "!- #1"
                 }
             },
@@ -117,7 +196,7 @@
                     "numinlets": 1,
                     "numoutlets": 4,
                     "outlettype": [ "int", "float", "int", "int" ],
-                    "patching_rect": [ 60.0, 255.0, 61.0, 22.0 ],
+                    "patching_rect": [ 105.0, 285.0, 61.0, 22.0 ],
                     "text": "dspstate~"
                 }
             },
@@ -139,7 +218,7 @@
                     "numinlets": 1,
                     "numoutlets": 2,
                     "outlettype": [ "bang", "clear" ],
-                    "patching_rect": [ 60.0, 285.0, 112.0, 22.0 ],
+                    "patching_rect": [ 105.0, 345.0, 112.0, 22.0 ],
                     "text": "t b clear"
                 }
             },
@@ -150,7 +229,7 @@
                     "numinlets": 3,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 92.0, 440.0, 56.0, 22.0 ],
+                    "patching_rect": [ 137.0, 500.0, 56.0, 22.0 ],
                     "text": "pack i i 1"
                 }
             },
@@ -161,7 +240,7 @@
                     "numinlets": 1,
                     "numoutlets": 2,
                     "outlettype": [ "int", "int" ],
-                    "patching_rect": [ 92.0, 345.0, 29.5, 22.0 ],
+                    "patching_rect": [ 137.0, 405.0, 29.5, 22.0 ],
                     "text": "t i i"
                 }
             },
@@ -172,7 +251,7 @@
                     "numinlets": 2,
                     "numoutlets": 3,
                     "outlettype": [ "bang", "bang", "int" ],
-                    "patching_rect": [ 60.0, 315.0, 51.0, 22.0 ],
+                    "patching_rect": [ 105.0, 375.0, 51.0, 22.0 ],
                     "text": "uzi #1 0"
                 }
             },
@@ -184,7 +263,7 @@
                     "maxclass": "outlet",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 30.0, 540.0, 30.0, 30.0 ]
+                    "patching_rect": [ 30.0, 600.0, 30.0, 30.0 ]
                 }
             },
             {
@@ -194,7 +273,7 @@
                     "numinlets": 1,
                     "numoutlets": 2,
                     "outlettype": [ "multichannelsignal", "" ],
-                    "patching_rect": [ 30.0, 495.0, 107.0, 22.0 ],
+                    "patching_rect": [ 30.0, 555.0, 107.0, 22.0 ],
                     "text": "mcs.matrix~ #1 #1"
                 }
             },
@@ -206,7 +285,7 @@
                     "maxclass": "inlet",
                     "numinlets": 0,
                     "numoutlets": 1,
-                    "outlettype": [ "multichannelsignal" ],
+                    "outlettype": [ "" ],
                     "patching_rect": [ 30.0, 165.0, 30.0, 30.0 ]
                 }
             },
@@ -258,6 +337,12 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-12", 0 ],
+                    "source": [ "obj-11", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-6", 0 ],
                     "source": [ "obj-12", 0 ]
                 }
@@ -265,13 +350,19 @@
             {
                 "patchline": {
                     "destination": [ "obj-7", 0 ],
-                    "midpoints": [ 162.5, 485.6328125, 39.5, 485.6328125 ],
+                    "midpoints": [ 207.5, 545.6328125, 39.5, 545.6328125 ],
                     "source": [ "obj-12", 1 ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-12", 0 ],
+                    "destination": [ "obj-7", 0 ],
+                    "source": [ "obj-13", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-11", 0 ],
                     "source": [ "obj-2", 0 ]
                 }
             },
@@ -321,7 +412,7 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-7", 0 ],
+                    "destination": [ "obj-13", 0 ],
                     "source": [ "obj-8", 0 ]
                 }
             },
