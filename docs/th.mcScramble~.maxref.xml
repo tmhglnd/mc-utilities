@@ -47,7 +47,7 @@
 
 	<!--ARGUMENTS-->
 	<objarglist>
-		<objarg name="channels" optional="0" type="symbol">
+		<objarg name="channels" optional="0" type="int">
 			<digest>
 				Specify the amount of channels for the in and output.
 			</digest>

@@ -33,7 +33,7 @@
 	<!--OUTLETS-->
 	<outletlist>
 		<outlet id="0" type="signal">
-			<digest>Th channelcount as a signal</digest>
+			<digest>The channelcount as a signal</digest>
 		</outlet>
 	</outletlist>
 

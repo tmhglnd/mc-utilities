@@ -13,6 +13,17 @@
         "boxes": [
             {
                 "box": {
+                    "id": "obj-24",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 2,
+                    "outlettype": [ "", "" ],
+                    "patching_rect": [ 294.0, 400.0, 92.0, 22.0 ],
+                    "text": "routepass ramp"
+                }
+            },
+            {
+                "box": {
                     "id": "obj-20",
                     "maxclass": "newobj",
                     "numinlets": 1,
@@ -339,7 +350,7 @@
                     "maxclass": "inlet",
                     "numinlets": 0,
                     "numoutlets": 1,
-                    "outlettype": [ "bang" ],
+                    "outlettype": [ "multichannelsignal" ],
                     "patching_rect": [ 30.0, 180.0, 30.0, 30.0 ]
                 }
             },
@@ -489,6 +500,18 @@
                     "destination": [ "obj-2", 0 ],
                     "midpoints": [ 256.5, 391.9921875, 64.5, 391.9921875 ],
                     "source": [ "obj-23", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-24", 0 ],
+                    "source": [ "obj-23", 1 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-31", 0 ],
+                    "source": [ "obj-24", 0 ]
                 }
             },
             {

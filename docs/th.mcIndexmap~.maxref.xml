@@ -41,7 +41,7 @@
 
 	<!--ARGUMENTS-->
 	<objarglist>
-		<objarg name="channels" optional="0" type="symbol">
+		<objarg name="channels" optional="0" type="int">
 			<digest>
 				Specify the amount of channels for the output.
 			</digest>
@@ -49,12 +49,12 @@
 				Specify the amount of channels for the output.
 			</description>
 		</objarg>
-		<objarg name="list" optional="1" type="symbol">
+		<objarg name="indexes" optional="1" type="list">
 			<digest>
-				Specify a list of indices to map the channels to.
+				Specify a list of indexes to map the channels to.
 			</digest>
 			<description>
-				Specify a list of indices to map the channels to.
+				Specify a list of indexes to map the channels to.
 			</description>
 		</objarg>
 	</objarglist>

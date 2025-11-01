@@ -29,7 +29,7 @@
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 0.0, 26.0, 472.0, 656.0 ],
+                        "rect": [ 100.0, 124.0, 472.0, 656.0 ],
                         "showontab": 1,
                         "boxes": [
                             {
@@ -199,24 +199,12 @@
                             },
                             {
                                 "box": {
-                                    "fontface": 1,
-                                    "fontsize": 12.0,
-                                    "id": "obj-21",
-                                    "maxclass": "comment",
-                                    "numinlets": 1,
-                                    "numoutlets": 0,
-                                    "patching_rect": [ 30.0, 83.0, 405.0, 20.0 ],
-                                    "text": "written by Timo Hoogland © 2019, www.timohoogland.com"
-                                }
-                            },
-                            {
-                                "box": {
                                     "id": "obj-88",
                                     "linecount": 3,
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 30.0, 105.0, 406.0, 47.0 ],
+                                    "patching_rect": [ 29.5, 83.0, 406.0, 47.0 ],
                                     "text": "Change the order of channels based on a list of values, similar to zl.indexmap. Input a multichannel on the left inlet, input a list on the right inlet re-ordering the channel order. \t",
                                     "textcolor": [ 0.32548999786377, 0.345097988843918, 0.372548997402191, 1.0 ]
                                 }
@@ -716,7 +704,7 @@
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 100.0, 124.0, 472.0, 656.0 ],
+                        "rect": [ 0.0, 26.0, 472.0, 656.0 ],
                         "showontab": 1,
                         "boxes": [
                             {
@@ -1111,14 +1099,6 @@
         "lines": [],
         "parameters": {
             "obj-5::obj-10": [ "mc.live.gain~", "mc.live.gain~", 0 ],
-            "parameterbanks": {
-                "0": {
-                    "index": 0,
-                    "name": "",
-                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
-                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-                }
-            },
             "inherited_shortname": 1
         },
         "autosave": 0,
