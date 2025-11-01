@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
 
-<c74object name="th.mcScramble~">
+<c74object name="th.mcMultiTool~">
 
 	<digest>
-		Scramble the order of channels
+		Scramble, Reverse and Rotate the channels
 	</digest>
 
 	<description>
-		Scramble the order of channels
+		Process a multichannel signal in many ways
 		<br /><br />
-		Scramble the channel order of a multi-channel signal. A bang scrambles the list. Similar to zl.scramble. Initially outputs the mc unscrambled.	
+		Scramble the channel order of a multichannel signal. A message "scramble" scrambles the channels, similar to zl.scramble. Initially outputs the mc unscrambled.
+		<br /><br />
+		Rotate the channel order of a multichannel signal. A message "rotate" followed by an integer specifies the rotation amount (left or right). The rotation is cumulative.
+		<br /><br />
+		Reverse the channel order of a multichannel signal. A message "reverse" reverses the channels, similar to zl.rev.
 	</description>
 
 	<!--METADATA-->
@@ -27,11 +31,8 @@
 		<inlet id="0" type="multi-channel signal">
 			<digest>Multi-channel signal input</digest>
 		</inlet>
-		<inlet id="0" type="bang">
-			<digest>Scramble the channels</digest>
-		</inlet>
 		<inlet id="0" type="message">
-			<digest>Seed the Pseudorandom Number Generator</digest>
+			<digest>Function depends on message content</digest>
 		</inlet>
 	</inletlist>
 
@@ -39,9 +40,6 @@
 	<outletlist>
 		<outlet id="0" type="multi-channel signal">
 			<digest>Multi-channel signal output</digest>
-		</outlet>
-		<outlet id="1" type="list">
-			<digest>Scrambled indices list</digest>
 		</outlet>
 	</outletlist>
 
@@ -78,7 +76,7 @@
 				Multi-channel signal input to scramble.
 			</description>
 		</method>
-		<method name="bang">
+		<!-- <method name="bang">
 			<arglist>
 				<arg name="bang" optional="1" type="bang" />
 			</arglist>
@@ -88,16 +86,49 @@
 			<description>
 				Scramble the channels.
 			</description>
-		</method>
-		<method name="seed">
+		</method> -->
+		<method name="scramble">
 			<arglist>
-				<arg name="seed" optional="1" type="message" />
+				<arg name="scramble" optional="1" type="message" />
 			</arglist>
 			<digest>
-				Seed the random generator.
+				Scramble the channels. 
 			</digest>
 			<description>
-				Seed the random generator.
+				Scramble the channels.
+			</description>
+		</method>
+		<method name="rotate">
+			<arglist>
+				<arg name="rotate" optional="1" type="message" />
+			</arglist>
+			<digest>
+				Rotate the channels.
+			</digest>
+			<description>
+				Rotate the channels.
+			</description>
+		</method>
+		<method name="reverse">
+			<arglist>
+				<arg name="reverse" optional="1" type="message" />
+			</arglist>
+			<digest>
+				Reverse the channels.
+			</digest>
+			<description>
+				Reverse the channels.
+			</description>
+		</method>
+		<method name="reset">
+			<arglist>
+				<arg name="reset" optional="1" type="message" />
+			</arglist>
+			<digest>
+				Reset the channels to default order.
+			</digest>
+			<description>
+				Reset the channels to default order.
 			</description>
 		</method>
 	</methodlist>

@@ -111,6 +111,7 @@
 		<seealso name="th.mcNth~"/>
 		<seealso name="th.mcMth~"/>
 		<seealso name="th.mcChannelcount~"/>
+		<seealso name="th.mcMultiTool~"/>
 		<seealso name="jit.cellblock"/>
 		<seealso name="dspstate~"/>
 	</seealsolist>

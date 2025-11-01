@@ -13,6 +13,28 @@
         "boxes": [
             {
                 "box": {
+                    "id": "obj-19",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "outlettype": [ "", "" ],
+                    "patching_rect": [ 332.0, 240.0, 125.0, 22.0 ],
+                    "text": "patcherargs @ramp 0"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-34",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 2,
+                    "outlettype": [ "", "" ],
+                    "patching_rect": [ 332.0, 280.0, 66.0, 22.0 ],
+                    "text": "route done"
+                }
+            },
+            {
+                "box": {
                     "id": "obj-11",
                     "maxclass": "newobj",
                     "numinlets": 1,
@@ -96,7 +118,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 45.0, 120.0, 450.0, 100.0 ],
+                    "patching_rect": [ 45.0, 120.0, 451.0, 100.0 ],
                     "text": "Arguments: <number-of-channels>\nThe MC MultiTool combines a few of the mc utilities tools into one abstraction. Namely the mcRev~, mcScramble~ and mcRot~. With a message you can trigger the specific output like \"scramble\" or \"reverse\". With \"rotate\" you can rotate the channels 1 or multiple steps to the right, or left (with -negative values). The rotation is accumulative (so 2x \"rotate 1\" = \"rotate 2\"). Use \"rotate reset\" to reset the rotation, use \"scramble reset\" to reset the scrambling. Use \"reset\" to reset all.",
                     "textcolor": [ 0.32548999786377, 0.345097988843918, 0.372548997402191, 1.0 ]
                 }
@@ -353,6 +375,12 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-34", 0 ],
+                    "source": [ "obj-19", 1 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-37", 0 ],
                     "source": [ "obj-2", 0 ]
                 }
@@ -373,6 +401,12 @@
                 "patchline": {
                     "destination": [ "obj-8", 0 ],
                     "source": [ "obj-3", 1 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-4", 0 ],
+                    "source": [ "obj-34", 1 ]
                 }
             },
             {

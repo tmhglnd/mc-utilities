@@ -95,7 +95,15 @@
 	<seealsolist>
 		<seealso name="th.mcFromMatrix~"/>
 		<seealso name="th.mcToMatrix~"/>
-		<seealso name="mc.channelcount~"/>
-		<seealso name="gen~"/>
+		<seealso name="th.mcScramble~"/>
+		<seealso name="th.mcIndexmap~"/>
+		<seealso name="th.mcRev~"/>
+		<seealso name="th.mcRot~"/>
+		<seealso name="th.mcNth~"/>
+		<seealso name="th.mcMth~"/>
+		<seealso name="th.mcChannelcount~"/>
+		<seealso name="th.mcMultiTool~"/>
+		<seealso name="jit.cellblock"/>
+		<seealso name="dspstate~"/>
 	</seealsolist>
 </c74object>
