@@ -1,7 +1,7 @@
 {
 	"name" : "th.mcutilities~",
 	"displayname" : "",
-	"version" : "1.0.0",
+	"version" : "1.1.0",
 	"author" : "Timo Hoogland",
 	"authors" : [  ],
 	"description" : "This package contains small abstractions to use with the MC domain in Max8 or 9. Read and write MC to a jit.matrix with th.mcToMatrix~ and th.mcFromMatrix~. Perform functions on channels as-if list like with th.mcScramble~, th.mcIndexmap~, th.mcNth~, th.mcMth~, th.mcRot~, th.mcRev~",
