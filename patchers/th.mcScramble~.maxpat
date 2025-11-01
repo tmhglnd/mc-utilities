@@ -13,6 +13,75 @@
         "boxes": [
             {
                 "box": {
+                    "data": {
+                        "patcher": {
+                            "fileversion": 1,
+                            "appversion": {
+                                "major": 9,
+                                "minor": 1,
+                                "revision": 0,
+                                "architecture": "x64",
+                                "modernui": 1
+                            },
+                            "classnamespace": "dsp.gen",
+                            "rect": [ 59.0, 115.0, 600.0, 450.0 ],
+                            "boxes": [
+                                {
+                                    "box": {
+                                        "maxclass": "comment",
+                                        "text": "just a throughput, to remove errors from mcs.matrix~ when there is not an input of another multichannel signal yet",
+                                        "linecount": 5,
+                                        "patching_rect": [ 91.0, 30.0, 150.0, 74.0 ],
+                                        "id": "obj-3",
+                                        "numinlets": 1,
+                                        "numoutlets": 0
+                                    }
+                                },
+                                {
+                                    "box": {
+                                        "maxclass": "newobj",
+                                        "text": "in 1",
+                                        "patching_rect": [ 30.0, 30.0, 28.0, 22.0 ],
+                                        "id": "obj-1",
+                                        "numinlets": 0,
+                                        "numoutlets": 1,
+                                        "outlettype": [ "" ]
+                                    }
+                                },
+                                {
+                                    "box": {
+                                        "maxclass": "newobj",
+                                        "text": "out 1",
+                                        "patching_rect": [ 30.0, 76.0, 35.0, 22.0 ],
+                                        "id": "obj-4",
+                                        "numinlets": 1,
+                                        "numoutlets": 0
+                                    }
+                                }
+                            ],
+                            "lines": [
+                                {
+                                    "patchline": {
+                                        "source": [ "obj-1", 0 ],
+                                        "destination": [ "obj-4", 0 ]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "id": "obj-21",
+                    "linecount": 2,
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "multichannelsignal" ],
+                    "patching_rect": [ 30.0, 257.0, 95.0, 35.0 ],
+                    "text": "mc.gen~ @t thru @chans #1",
+                    "wrapper_uniquekey": "u644007488"
+                }
+            },
+            {
+                "box": {
                     "id": "obj-24",
                     "maxclass": "newobj",
                     "numinlets": 2,
@@ -27,10 +96,10 @@
                     "id": "obj-20",
                     "maxclass": "newobj",
                     "numinlets": 1,
-                    "numoutlets": 4,
-                    "outlettype": [ "int", "float", "int", "int" ],
-                    "patching_rect": [ 55.0, 364.0, 61.0, 22.0 ],
-                    "text": "dspstate~"
+                    "numoutlets": 1,
+                    "outlettype": [ "bang" ],
+                    "patching_rect": [ 55.0, 364.0, 58.0, 22.0 ],
+                    "text": "loadbang"
                 }
             },
             {
@@ -350,7 +419,7 @@
                     "maxclass": "inlet",
                     "numinlets": 0,
                     "numoutlets": 1,
-                    "outlettype": [ "multichannelsignal" ],
+                    "outlettype": [ "bang" ],
                     "patching_rect": [ 30.0, 180.0, 30.0, 30.0 ]
                 }
             },
@@ -492,6 +561,12 @@
             {
                 "patchline": {
                     "destination": [ "obj-7", 0 ],
+                    "source": [ "obj-21", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-7", 0 ],
                     "source": [ "obj-22", 0 ]
                 }
             },
@@ -605,7 +680,7 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-7", 0 ],
+                    "destination": [ "obj-21", 0 ],
                     "source": [ "obj-8", 0 ]
                 }
             },
