@@ -9,7 +9,7 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 129.0, 115.0, 473.0, 695.0 ],
+        "rect": [ 346.0, 137.0, 473.0, 695.0 ],
         "showrootpatcherontab": 0,
         "showontab": 0,
         "boxes": [
@@ -29,7 +29,7 @@
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 129.0, 141.0, 473.0, 669.0 ],
+                        "rect": [ 346.0, 163.0, 473.0, 669.0 ],
                         "showontab": 1,
                         "boxes": [
                             {
@@ -106,7 +106,7 @@
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
                                     "patching_rect": [ 178.0, 375.0, 81.0, 22.0 ],
-                                    "text": "0 1 2 3 4 5"
+                                    "text": "4 5 1 3 2 0"
                                 }
                             },
                             {
@@ -255,7 +255,7 @@
                             },
                             {
                                 "box": {
-                                    "color": [ 0.952941, 0.564706, 0.098039, 1.0 ],
+                                    "color": [ 1.0, 0.5781051517, 0.0, 1.0 ],
                                     "id": "obj-189",
                                     "maxclass": "newobj",
                                     "numinlets": 1,
@@ -793,11 +793,43 @@
                         "boxes": [
                             {
                                 "box": {
+                                    "id": "obj-10",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [ 240.0, 210.0, 171.0, 20.0 ],
+                                    "text": "Adjust the crossfade ramptime"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "obj-7",
+                                    "maxclass": "number",
+                                    "numinlets": 1,
+                                    "numoutlets": 2,
+                                    "outlettype": [ "", "bang" ],
+                                    "parameter_enable": 0,
+                                    "patching_rect": [ 180.0, 209.0, 50.0, 22.0 ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "obj-4",
+                                    "maxclass": "message",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [ "" ],
+                                    "patching_rect": [ 180.0, 239.0, 53.0, 22.0 ],
+                                    "text": "ramp $1"
+                                }
+                            },
+                            {
+                                "box": {
                                     "id": "obj-5",
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 180.0, 270.0, 172.0, 20.0 ],
+                                    "patching_rect": [ 236.0, 271.0, 172.0, 20.0 ],
                                     "text": "Reset to original channel order"
                                 }
                             },
@@ -808,7 +840,7 @@
                                     "numinlets": 2,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 142.0, 269.0, 35.0, 22.0 ],
+                                    "patching_rect": [ 198.0, 270.0, 35.0, 22.0 ],
                                     "text": "reset"
                                 }
                             },
@@ -910,7 +942,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 142.0, 235.0, 124.0, 20.0 ],
+                                    "patching_rect": [ 90.0, 210.0, 78.0, 20.0 ],
                                     "text": "SCRAMBLE!"
                                 }
                             },
@@ -934,7 +966,7 @@
                                     "numoutlets": 1,
                                     "outlettype": [ "bang" ],
                                     "parameter_enable": 0,
-                                    "patching_rect": [ 112.0, 235.0, 24.0, 24.0 ]
+                                    "patching_rect": [ 60.0, 210.0, 24.0, 24.0 ]
                                 }
                             },
                             {
@@ -1060,6 +1092,18 @@
                                     "destination": [ "obj-23", 0 ],
                                     "source": [ "obj-3", 0 ]
                                 }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [ "obj-23", 0 ],
+                                    "source": [ "obj-4", 0 ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [ "obj-4", 0 ],
+                                    "source": [ "obj-7", 0 ]
+                                }
                             }
                         ],
                         "styles": [
@@ -1106,6 +1150,14 @@
         "parameters": {
             "obj-2::obj-10": [ "mc.live.gain~", "mc.live.gain~", 0 ],
             "obj-2::obj-14": [ "toggle", "toggle", 0 ],
+            "parameterbanks": {
+                "0": {
+                    "index": 0,
+                    "name": "",
+                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
+                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+                }
+            },
             "inherited_shortname": 1
         },
         "autosave": 0,
