@@ -8,7 +8,7 @@
 
 ## About
 
-This package contains small abstractions to use with the MC domain in Max8.
+This package contains small abstractions to use with the Multichannel Signal domain in Max8 or 9.
 
 ## Contains
 

@@ -20,7 +20,6 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 645.0, 382.625, 139.0, 33.0 ],
-                    "presentation_linecount": 2,
                     "text": "scramble, rotate and reverse all-in-one!",
                     "textcolor": [ 0.32548999786377, 0.345097988843918, 0.372548997402191, 1.0 ]
                 }
@@ -127,7 +126,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 481.0, 383.5, 139.0, 47.0 ],
+                    "patching_rect": [ 475.0, 383.0, 139.0, 47.0 ],
                     "text": "channelcount as signal (mc.channelcount~ can now be used as well)",
                     "textcolor": [ 0.32548999786377, 0.345097988843918, 0.372548997402191, 1.0 ]
                 }
@@ -140,7 +139,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 466.0, 435.5, 145.0, 22.0 ],
+                    "patching_rect": [ 460.0, 435.0, 145.0, 22.0 ],
                     "text": "help th.mcChannelcount~"
                 }
             },
@@ -154,7 +153,7 @@
                     "numoutlets": 4,
                     "outlettype": [ "bang", "bang", "", "int" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 466.0, 351.5, 150.0, 38.75 ]
+                    "patching_rect": [ 460.0, 351.0, 150.0, 38.75 ]
                 }
             },
             {
@@ -215,7 +214,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 466.0, 231.5, 92.0, 22.0 ],
+                    "patching_rect": [ 460.0, 232.0, 92.0, 22.0 ],
                     "text": "help th.mcRev~"
                 }
             },
@@ -229,7 +228,7 @@
                     "numoutlets": 4,
                     "outlettype": [ "bang", "bang", "", "int" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 466.0, 177.5, 92.0, 39.5 ]
+                    "patching_rect": [ 460.0, 178.0, 92.0, 39.5 ]
                 }
             },
             {
@@ -240,7 +239,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 467.0, 314.5, 90.0, 22.0 ],
+                    "patching_rect": [ 461.0, 315.0, 90.0, 22.0 ],
                     "text": "help th.mcRot~"
                 }
             },
@@ -254,7 +253,7 @@
                     "numoutlets": 4,
                     "outlettype": [ "bang", "bang", "", "int" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 467.0, 260.5, 90.0, 39.5 ]
+                    "patching_rect": [ 461.0, 261.0, 90.0, 39.5 ]
                 }
             },
             {
@@ -263,7 +262,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 480.0, 209.5, 125.0, 20.0 ],
+                    "patching_rect": [ 474.0, 210.0, 125.0, 20.0 ],
                     "text": "reverse channel order",
                     "textcolor": [ 0.32548999786377, 0.345097988843918, 0.372548997402191, 1.0 ]
                 }
@@ -275,7 +274,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "multichannelsignal" ],
-                    "patching_rect": [ 480.0, 185.5, 66.0, 22.0 ],
+                    "patching_rect": [ 474.0, 186.0, 66.0, 22.0 ],
                     "text": "th.mcRev~"
                 }
             },
@@ -307,7 +306,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 482.0, 292.5, 116.0, 20.0 ],
+                    "patching_rect": [ 476.0, 293.0, 116.0, 20.0 ],
                     "text": "rotate channel order",
                     "textcolor": [ 0.32548999786377, 0.345097988843918, 0.372548997402191, 1.0 ]
                 }
@@ -406,7 +405,7 @@
                     "numoutlets": 4,
                     "outlettype": [ "bang", "bang", "", "int" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 297.0, 352.0, 132.0, 37.0 ]
+                    "patching_rect": [ 297.0, 351.5, 132.0, 37.0 ]
                 }
             },
             {
@@ -419,7 +418,7 @@
                     "numoutlets": 4,
                     "outlettype": [ "bang", "bang", "", "int" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 134.0, 352.5, 120.0, 37.0 ]
+                    "patching_rect": [ 134.0, 352.0, 120.0, 37.0 ]
                 }
             },
             {
@@ -440,7 +439,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 481.0, 359.5, 119.0, 22.0 ],
+                    "patching_rect": [ 475.0, 359.0, 119.0, 22.0 ],
                     "text": "th.mcChannelcount~"
                 }
             },
@@ -473,7 +472,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "multichannelsignal" ],
-                    "patching_rect": [ 482.0, 268.5, 64.0, 22.0 ],
+                    "patching_rect": [ 476.0, 269.0, 64.0, 22.0 ],
                     "text": "th.mcRot~"
                 }
             },
@@ -506,8 +505,8 @@
                     "numinlets": 0,
                     "numoutlets": 1,
                     "outlettype": [ "multichannelsignal" ],
-                    "patching_rect": [ 311.0, 359.0, 106.0, 22.0 ],
-                    "text": "th.mcFromMatrix~"
+                    "patching_rect": [ 311.0, 359.0, 113.0, 22.0 ],
+                    "text": "th.mcFromMatrix~ -"
                 }
             },
             {
@@ -516,8 +515,8 @@
                     "maxclass": "newobj",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 149.0, 359.5, 90.0, 22.0 ],
-                    "text": "th.mcToMatrix~"
+                    "patching_rect": [ 149.0, 359.5, 98.0, 22.0 ],
+                    "text": "th.mcToMatrix~ -"
                 }
             },
             {
