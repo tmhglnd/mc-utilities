@@ -296,7 +296,7 @@
                     "maxclass": "inlet",
                     "numinlets": 0,
                     "numoutlets": 1,
-                    "outlettype": [ "" ],
+                    "outlettype": [ "multichannelsignal" ],
                     "patching_rect": [ 30.0, 180.0, 30.0, 30.0 ]
                 }
             },
@@ -308,8 +308,8 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 30.0, 83.0, 367.0, 20.0 ],
-                    "text": "written by Timo Hoogland © 2018, www.timohoogland.com"
+                    "patching_rect": [ 30.0, 83.0, 373.0, 20.0 ],
+                    "text": "written by Timo Hoogland © 2018-2025, www.timohoogland.com"
                 }
             },
             {
